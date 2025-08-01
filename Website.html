@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TekOps</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-bg: #f5f5f5;
+      --radius: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--gray-bg);
+      background-image: url('https://github.com/dersa777/Website/blob/bd7a9aadc1ccfb4d733303acdf57cbc7bb56ae7c/Background1.svg?raw=true');
+      background-repeat: repeat;
+      background-size: auto;
+      color: var(--black);
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .container {
+      background: var(--white);
+      border-radius: var(--radius);
+      max-width: 960px;
+      width: 100%;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    header, section, footer {
+      padding: 4rem 2rem;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 6rem;
+    }
+
+    h1 {
+      font-family: 'Cal Sans', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .services {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .service-block {
+      background: #fafafa;
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .service-block h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-block ul {
+      list-style: none;
+      padding-left: 0;
+      font-weight: 400;
+    }
+
+    .service-block ul li::before {
+      content: "– ";
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--black);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      background: none;
+      border: 2px solid var(--black);
+      color: var(--black);
+      border-radius: 8px;
+      font-weight: 500;
+      text-transform: uppercase;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      border-top: 1px solid #ddd;
+      padding-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 700px) {
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>TekOps</h1>
+      <p>Efficient, Scalable IT Solutions for Businesses</p>
+      <a href="#" class="btn">Save Business Card</a>
+    </header>
+
+    <section id="services">
+      <h2>What We Do</h2>
+      <div class="services fade-in">
+        <div class="service-block">
+          <h3>IT Infrastructure & Networking</h3>
+          <ul>
+            <li>Structured cabling and network setup</li>
+            <li>VPN and secure remote access</li>
+            <li>Scalable storage and backup solutions</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3>Systems Management & Virtualization</h3>
+          <ul>
+            <li>Server deployment & Active Directory</li>
+            <li>Virtual environments and hypervisors</li>
+            <li>Email, domain, and cloud integration</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3>Support & Maintenance</h3>
+          <ul>
+            <li>On-site and remote IT support</li>
+            <li>System monitoring and health checks</li>
+            <li>Hardware troubleshooting and repairs</li>
+          </ul>
+        </div>
+        <div class="service-block">
+          <h3>IT Consulting & Strategy</h3>
+          <ul>
+            <li>Infrastructure planning and audits</li>
+            <li>Technology optimization</li>
+            <li>Scalable solutions for all business sizes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="about fade-in">
+      <h2>About TekOps</h2>
+      <p>TekOps delivers tailored IT infrastructure and support services to help companies run smarter, faster, and more securely. Whether you're building from scratch or optimizing your current setup, we provide scalable solutions with hands-on expertise.</p>
+    </section>
+
+    <section class="contact fade-in">
+      <h2>Contact</h2>
+      <a href="tel:+1234567890">📞 +1 (234) 567-890</a>
+      <a href="mailto:contact@tekops.com">✉️ contact@tekops.com</a>
+      <button class="btn" disabled>Save Digital Business Card</button>
+    </section>
+
+    <footer>
+      &copy; 2025 TekOps. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
